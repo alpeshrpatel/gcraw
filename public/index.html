@@ -1,0 +1,58 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="scotchTodo">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Crawler</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		html 					
+			{ overflow-y:scroll; background: url('./images/grandcanyon.png') }
+		body 					
+			{ padding-top:50px; }
+	</style>
+
+	<link rel="stylesheet" href="./css/style.css"/>
+
+	<!-- SPELLS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script><!-- load angular -->
+
+	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
+	<script src="js/services/entity.js"></script> <!-- load our todo service -->
+	<script src="js/core.js"></script> <!-- load our main application -->
+
+</head>
+<!-- SET THE CONTROLLER -->
+<body ng-controller="mainController">
+	<div class="container ">
+	
+		<!-- FORM TO CREATE TODOS -->
+		<div class="container">
+			<div id="todo-form" class="row">
+				<div class="col-sm-8 text-center">
+					<form>
+						<div class="form-group">
+							<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+							<input type="text" class="form-control input-lg text-center" 
+								placeholder="Please add your text" ng-model="formData.text" value="Please add your text" >
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-2" > 
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createEntity()">Search</button>
+				</div>
+				<div ng-if="success"> Data inserted successfully. </div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

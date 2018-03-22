@@ -1,0 +1,16 @@
+{
+    "api" 		: "https://maps.googleapis.com/maps/api/place/textsearch/json?",
+    "placeapi" 	: "https://maps.googleapis.com/maps/api/place/details/json?",
+    "apikey" 		: "AIzaSyBnggy1WxUXtn7qcXNhQd8tmctEe3OMebs",
+    "env"			:"dev",
+    "mongodb"		:	
+    {
+        "dbURL"	: "mongodb://localhost/wis",	
+        "hostname": 	"",
+        "port"	:	"",
+        "username": 	"",
+        "password": 	""
+    }
+    
+  }
+  
